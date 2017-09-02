@@ -1,4 +1,4 @@
-teamList = ["minnesotaunited","atlantasilverbacks","railhawks","fcedmonton","ftlstrikers","indyeleven","armadafc","nycosmos","ottawafuryfc","sascorpionsfc","tampabayrowdies"];
+teamList = ["minnesotaunited"];
 
 $.each( teamList, function( key, val ) {
   $.getJSON(
