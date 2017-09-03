@@ -1,8 +1,8 @@
-teamList = ["minnesotaunited"];
+teamList = ["minnesotaunited","SoundersFC","timbers","NYCFC","sportingkc","PhillyUnion","TFC","OCLions","rbny","LAGalaxy","DCUnited","TheMassive","SJEarthquakes","Chicagofire","NewEnglandRevolution","dynamo","whitecapsfc","FCDallas","realsaltlake","Rapids","montrealimpact"];
 
 $.each( teamList, function( key, val ) {
   $.getJSON(
-    "http://api.reddit.com/r/"+val+"/about",
+    "https://api.reddit.com/r/"+val+"/about",
     function foo(data)
     {
       $("#team").append(val + " : ");
