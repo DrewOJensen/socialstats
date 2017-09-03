@@ -5,7 +5,7 @@ $.each( teamList, function( key, val ) {
     "https://api.reddit.com/r/"+key+"/about",
     function foo(data)
     {
-      $("#team").append(value + " : ");
+      $("#team").append(val + " : ");
       $("#team").append(data.data.subscribers + '<br>');
     }
   );
