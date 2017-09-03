@@ -1,11 +1,11 @@
-teamList = ["minnesotaunited","SoundersFC","timbers","NYCFC","sportingkc","PhillyUnion","TFC","OCLions","rbny","LAGalaxy","DCUnited","TheMassive","SJEarthquakes","Chicagofire","NewEnglandRevolution","dynamo","whitecapsfc","FCDallas","realsaltlake","Rapids","montrealimpact"];
+var teamList = { minnesotaunited: "Minnesota United FC", SoundersFC: "Seattle Sounders FC", timbers: "Portland Timbers", NYCFC: "New York City FC", sportingkc: "Sporting Kansas City",PhillyUnion: "Philadelphia Union",TFC: "Toronto FC",OCLions: "Orlando City SC",rbny: "New York Red Bulls",LAGalaxy: "LA Galaxy",DCUnited: "D.C. United",TheMassive: "Columbus Crew SC",SJEarthquakes: "San Jose Earthquakes",Chicagofire: "Chicago Fire",NewEnglandRevolution: "New England Revolution",dynamo: "Houston Dynamo",whitecapsfc: "Vancouver Whitecaps FC",FCDallas: "FC Dallas",realsaltlake: "Real Salt Lake",Rapids: "Colorado Rapids",montrealimpact: "Montreal Impact"}
 
 $.each( teamList, function( key, val ) {
   $.getJSON(
-    "https://api.reddit.com/r/"+val+"/about",
+    "https://api.reddit.com/r/"+key+"/about",
     function foo(data)
     {
-      $("#team").append(val + " : ");
+      $("#team").append(value + " : ");
       $("#team").append(data.data.subscribers + '<br>');
     }
   );
